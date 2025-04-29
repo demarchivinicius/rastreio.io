@@ -1,21 +1,24 @@
 # 📦 Bot de Rastreamento de Encomendas no Telegram
 
-Um bot simples em PHP que responde no Telegram com o status de um código de rastreio dos Correios. Ele verifica se o código enviado está no formato correto e responde com uma mensagem genérica de rastreamento.
+Um bot feito em PHP que responde no Telegram com o status atualizado de um código de rastreio dos Correios. Ele usa a API da [Linketrack](https://linketrack.com/) para buscar as informações reais da encomenda.
+
+---
 
 ## 🚀 Funcionalidades
 
 - Recebe mensagens via Telegram.
-- Valida se o texto é um código de rastreio dos Correios no formato `AA123456789BR`.
-- Retorna uma resposta personalizada confirmando o recebimento do código.
-
-> ⚠️ Por enquanto, o bot **não consulta a API dos Correios**, apenas valida o formato do código. Ideal como base para evoluções futuras.
+- Valida se o texto enviado é um código de rastreio válido (ex: `AA123456789BR`).
+- Consulta o status de rastreio em tempo real usando a API da Linketrack.
+- Responde com o status da última movimentação do pacote.
 
 ---
 
-## 📂 Estrutura do Projeto
+## 📦 Tecnologias Usadas
 
-- `rastreamento.php`: script principal que consome a API do Telegram e responde ao usuário.
-  
+- PHP
+- Telegram Bot API
+- Linketrack API
+
 ---
 
 ## 🛠️ Como Usar
